@@ -1,0 +1,25 @@
+/* Navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: blue solid;
+}
+
+/* Nav menu */
+
+.navmenu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.navmenu a {
+  display: block;
+  padding: 1.5em;
+}
+
+.logo {
+  align-self: flex-start;
+}
+.navlink {
+}
