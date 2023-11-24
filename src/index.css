@@ -13,7 +13,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-size: 15px;
-  padding: 80px;
+  color: var(-color-off-white);
 }
 
 h1 {

@@ -1,9 +1,17 @@
 .container {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: fit-content;
+  height: 100%;
   max-width: 1440px;
   border: red solid;
+  margin: 0 8rem;
+
   /* justify-content: center; */
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    margin: 0;
+  }
 }
