@@ -1,27 +1,24 @@
+/* ------------------------------------------------------- */
+/* Main container */
 .container {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100%;
+  flex-direction: row;
   max-width: 1440px;
-  border: red solid;
   margin: 0 8rem;
-  justify-content: baseline;
-
-  /* justify-content: center; */
+}
+/* ------------------------------------------------------- */
+/* Banner container */
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 70%;
+  padding-right: 1.5rem;
 }
 
 .desktop-image {
   width: 100%;
 }
-
-.banner-container {
-  display: flex;
-  flex-direction: column;
-  border: rgb(0, 255, 34) solid;
-  width: 70%;
-}
-
 .main-text-container {
   padding-top: 2rem;
   display: flex;
@@ -29,12 +26,12 @@
 }
 
 .banner-tittle {
-  padding: 0.1rem 3rem 0 0;
+  padding: 0.1rem;
   font-size: 3rem;
 }
 
 .smallbox-text {
-  margin: 0 2rem;
+  margin: 0 3rem 0;
   align-self: self-end;
   line-height: 20%;
   font-family: var();
@@ -49,16 +46,81 @@
 
 .button-read {
   width: 15em;
+  font-size: 12px;
   padding: 1em;
-  background-color: var(--color-Very-dark-blue);
+  background-color: var(--color-Soft-red);
   color: white;
   letter-spacing: 5px;
-  border-radius: 2px;
+  border: none;
   cursor: pointer;
 }
+/* ------------------------------------------------------- */
+/* New container */
+
+.new-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  background-color: var(--color-Very-dark-blue);
+  color: white;
+  padding: 0 2rem;
+}
+
+.intro-text-new {
+  align-self: flex-start;
+  display: block;
+  width: 20rem;
+}
+.new-container h2 {
+  color: var(--color-Soft-orange);
+}
+
+.new-container p {
+  align-self: center;
+  color: var(--color-Dark-grayish-blue);
+}
+
+.new-container hr {
+  color: var(--color-Dark-grayish-blue);
+  margin: 2rem;
+
+  border-bottom: 5px;
+  width: 90%;
+  align-self: stretch;
+}
+/* ------------------------------------------------------- */
+/* Post container */
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: row;
+  border: red solid;
+  margin: 3rem 8rem;
+  height: 40%;
+}
+
+.set-post {
+  display: flex;
+  flex-direction: row;
+  border: green solid;
+  width: 32%;
+}
+
+.set-post img {
+  height: 40%;
+}
+.textbox-post {
+  padding: 0 1.5rem;
+  height: 20%;
+}
+
 /* CSS Responsive */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .container {
     margin: 0;
+    flex-wrap: wrap;
   }
 }
