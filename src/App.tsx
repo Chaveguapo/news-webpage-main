@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Container />
+      <Container></Container>
     </>
   );
 }

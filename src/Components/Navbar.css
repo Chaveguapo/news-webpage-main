@@ -7,7 +7,7 @@
   border: blue solid;
   position: relative;
   max-width: 1440px;
-  margin: 5rem 8rem 0;
+  margin: 5rem 8rem 2rem;
 }
 
 /* Nav menu */
@@ -22,7 +22,7 @@
 .navmenu a {
   display: block;
   padding: 1em;
-  color: var(--Color-Dark-grayish-blue);
+  color: var(--color-Dark-grayish-blue);
   text-decoration: none;
   cursor: pointer;
 }

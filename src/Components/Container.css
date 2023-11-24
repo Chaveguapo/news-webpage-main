@@ -6,10 +6,57 @@
   max-width: 1440px;
   border: red solid;
   margin: 0 8rem;
+  justify-content: baseline;
 
   /* justify-content: center; */
 }
 
+.desktop-image {
+  width: 100%;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  border: rgb(0, 255, 34) solid;
+  width: 70%;
+}
+
+.main-text-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.banner-tittle {
+  padding: 0.1rem 3rem 0 0;
+  font-size: 3rem;
+}
+
+.smallbox-text {
+  margin: 0 2rem;
+  align-self: self-end;
+  line-height: 20%;
+  font-family: var();
+}
+
+.smallbox-text p {
+  padding: 0 0 1.5rem;
+  justify-self: end;
+  line-height: -2px;
+  color: var(--color-Dark-grayish-blue);
+}
+
+.button-read {
+  width: 15em;
+  padding: 1em;
+  background-color: var(--color-Very-dark-blue);
+  color: white;
+  letter-spacing: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+/* CSS Responsive */
 @media screen and (max-width: 450px) {
   .container {
     margin: 0;
