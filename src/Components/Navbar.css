@@ -4,7 +4,6 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
   position: relative;
   max-width: 1440px;
   margin: 5rem 8rem 2rem;
@@ -26,7 +25,7 @@
   cursor: pointer;
 }
 .navmenu a:hover {
-  color: var(--color-Soft-orange);
+  color: var(--color-Soft-red);
   /* transition: color 0.5s; */
 }
 
@@ -51,7 +50,7 @@
 
 @media screen and (max-width: 450px) {
   .navbar-container {
-    margin: 0;
+    margin: 2em;
   }
   .hamburger-menu {
     display: block;
@@ -59,13 +58,11 @@
 }
 @media screen and (max-width: 700px) {
   .navmenu {
-    /* // navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar) */
     position: absolute;
+    display: flex;
     top: 60px;
     left: 0;
-    /* // stacks the li tags vertically  */
     flex-direction: column;
-    /* // makes menu span full height and width */
   }
 
   .navmenu a {

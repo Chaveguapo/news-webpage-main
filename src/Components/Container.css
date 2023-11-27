@@ -5,6 +5,7 @@
   flex-direction: row;
   max-width: 1440px;
   margin: 0 8rem;
+  justify-content: center;
 }
 /* ------------------------------------------------------- */
 /* Banner container */
@@ -54,6 +55,11 @@
   border: none;
   cursor: pointer;
 }
+
+.button-read:hover {
+  background-color: black;
+}
+
 /* ------------------------------------------------------- */
 /* New container */
 
@@ -63,12 +69,14 @@
   flex-direction: column;
   background-color: var(--color-Very-dark-blue);
   color: white;
-  padding: 0 2rem;
+  padding: 1rem;
+  align-items: left;
 }
 
 .intro-text-new {
   align-self: flex-start;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 20rem;
 }
 .new-container h2 {
@@ -76,14 +84,14 @@
 }
 
 .new-container p {
+  font-size: 15px;
   align-self: center;
   color: var(--color-Dark-grayish-blue);
 }
 
 .new-container hr {
   color: var(--color-Dark-grayish-blue);
-  margin: 2rem;
-
+  margin: 1.5rem;
   border-bottom: 5px;
   width: 90%;
   align-self: stretch;
@@ -92,6 +100,7 @@
 /* Post container */
 
 .post-container {
+  max-width: 1440px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -113,7 +122,6 @@
   padding-right: 2em;
 }
 .textbox-post {
-  /* height: 20%; */
   align-self: center;
   line-height: 10px;
 }
@@ -121,18 +129,37 @@
 .textbox-post h2 {
   color: var(--color-Grayish-blue);
 }
+
 .textbox-post h3 {
   color: var(--color-Very-dark-blue);
   font-weight: 900;
+  cursor: pointer;
+}
+
+/* States */
+.textbox-post h3:hover {
+  color: var(--color-Soft-red);
 }
 
 .textbox-post p {
   color: var(--color-Dark-grayish-blue);
 }
+
 /* CSS Responsive */
 @media screen and (max-width: 500px) {
   .container {
-    margin: 0;
+    margin: 2em;
+    flex-direction: column;
     flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .banner-container {
+    flex-direction: column;
+  }
+  .main-text-container {
+    display: flex;
+    flex-direction: column;
+    align-self: left;
   }
 }
