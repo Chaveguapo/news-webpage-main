@@ -5,7 +5,6 @@
   flex-direction: row;
   max-width: 1440px;
   margin: 0 8rem;
-  justify-content: center;
 }
 /* ------------------------------------------------------- */
 /* Banner container */
@@ -13,7 +12,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
   padding-right: 1.5rem;
 }
 
@@ -105,8 +103,8 @@
 .post-container {
   max-width: 1440px;
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
   flex-direction: row;
   margin: 0.2rem 8rem;
   height: 40%;
@@ -115,7 +113,6 @@
 .set-post {
   display: flex;
   flex-direction: row;
-
   max-width: 24rem;
 }
 
@@ -151,18 +148,34 @@
 /* CSS Responsive */
 @media screen and (max-width: 500px) {
   .container {
-    margin: 2em;
+    margin: 1em;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 5rem;
   }
 
   .banner-container {
-    flex-direction: column;
+    padding: 0;
   }
+  .banner-tittle {
+    /* padding: 0.1rem; */
+    font-size: 2rem;
+    padding-right: 2rem;
+  }
+  .desktop-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
   .main-text-container {
     display: flex;
     flex-direction: column;
     align-self: left;
+  }
+
+  .post-container {
+    margin: 1em;
+    justify-content: center;
   }
 }
