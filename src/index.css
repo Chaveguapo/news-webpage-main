@@ -16,6 +16,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 15px;
   background-color: hsl(36, 100%, 99%);
+  align-items: center;
 }
 
 h1 {
