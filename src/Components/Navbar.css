@@ -33,40 +33,65 @@
   align-self: flex-start;
 }
 
-.hamburger-menu {
+/* .hamburger-menu {
   color: inherit;
   min-width: 32px;
   min-height: 32px;
   transition: opacity 80ms linear;
-  /* hiding the hamburger icon on large screen sizes */
   display: none;
   opacity: 0;
 }
 
 .hamburger-menu:hover {
   background-color: gray;
+} */
+.hamburger span {
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin: 6px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 /* CSS Responsive */
 
-@media screen and (max-width: 450px) {
-  .navbar-container {
-    margin: 2em;
+@media screen and (min-width: 500px) {
+  .hamburger {
+    display: none;
   }
+}
+
+@media screen and (max-width: 769px) {
   .hamburger-menu {
     display: block;
   }
-}
-@media screen and (max-width: 700px) {
   .navmenu {
-    position: absolute;
+    /* position: absolute;
     display: flex;
-    top: 60px;
+    top: 50px;
     left: 0;
-    flex-direction: column;
+    flex-direction: column; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  .navmenu a {
-    text-align: left;
-    border: rgb(255, 0, 170) solid;
+  .navmenu li {
+    margin: 10px 0;
+  }
+
+  .navmenu.open {
+    display: block; /* Show the menu when open */
   }
 }
