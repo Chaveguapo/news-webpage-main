@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   position: relative;
   max-width: 1440px;
   margin: 5rem 8rem 2rem;
@@ -23,72 +22,62 @@
   color: var(--color-Dark-grayish-blue);
   text-decoration: none;
   cursor: pointer;
+  visibility: visible;
 }
 .navmenu a:hover {
   color: var(--color-Soft-red);
   /* transition: color 0.5s; */
 }
 
-.logo {
-  align-self: flex-start;
+.close-menu {
+  width: 0%;
+  visibility: hidden;
 }
 
-/* .hamburger-menu {
-  color: inherit;
-  min-width: 32px;
-  min-height: 32px;
-  transition: opacity 80ms linear;
-  display: none;
-  opacity: 0;
+.close-menu > h3 {
+  text-align: right;
+  font-weight: 400;
+  font-size: 2.5em;
+  margin: 0.5em;
 }
 
-.hamburger-menu:hover {
-  background-color: gray;
-} */
-.hamburger span {
-  display: block;
-  width: 35px;
-  height: 3px;
-  margin: 6px auto;
-  background-color: #333;
-  transition: all 0.3s ease-in-out;
-}
-.hamburger.active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(45deg) translate(-8px, -8px);
+.buttonmenu {
+  visibility: hidden;
 }
 /* CSS Responsive */
 
-@media screen and (min-width: 500px) {
-  .hamburger {
-    display: none;
+@media screen and (max-width: 600px) {
+  .buttonmenu {
+    visibility: visible;
   }
-}
+  .close-menu {
+    width: 100%;
+    visibility: inherit;
+  }
 
-@media screen and (max-width: 769px) {
-  .hamburger-menu {
-    display: block;
-  }
   .navmenu {
-    /* position: absolute;
-    display: flex;
-    top: 50px;
-    left: 0;
-    flex-direction: column; */
+    position: fixed;
+    width: 60dvw;
+    height: 100dvh;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    z-index: 10;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    border: red solid;
+    margin-top: 0;
+    visibility: hidden;
+    background-color: var(--color-off-white);
   }
 
-  .navmenu li {
+  .navbar-container {
+    position: relative;
+    margin: 1em;
+  }
+
+  .navmenu li a {
     margin: 10px 0;
+    visibility: inherit;
   }
 
   .navmenu.open {

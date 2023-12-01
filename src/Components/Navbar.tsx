@@ -3,41 +3,55 @@ import { useState } from "react";
 import "./Navbar.css";
 
 export function Navbar() {
-  const [isMenuOpen, setIsMenuIsOpen] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-  const toogleMenu = () => {
-    setIsMenuIsOpen(!isMenuOpen);
+  const closeClick = () => {
+    setIsMenuVisible(false);
   };
+
+  const hamburgerClick = () => {
+    setIsMenuVisible(true);
+    console.log("I did it!");
+  };
+
   return (
     <>
-      <header className="navbar-container">
+      {/* Wrapper container */}
+      <div className="navbar-container">
         <img src={logo} alt={logo}></img>
-        <div
-          className={`hamburger-menu ${isMenuOpen ? "open" : ""}`}
-          onClick={toogleMenu}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+        {/* Hamburger lines */}
+        <div className="menutoggle">
+          {/* Menu items */}
+          <button type="button" className="buttonmenu" onClick={hamburgerClick}>
+            U
+          </button>
+          <div>
+            <ul
+              className="navmenu"
+              style={{ visibility: isMenuVisible ? "visible" : "hidden" }}
+            >
+              <div className="close-menu">
+                <h3 onClick={closeClick}>X</h3>
+              </div>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#news">New</a>
+              </li>
+              <li>
+                <a href="#popular">Popular</a>
+              </li>
+              <li>
+                <a href="#trending">Trending</a>
+              </li>
+              <li>
+                <a href="#categories">Categories</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul className={`navmenu ${isMenuOpen ? "open" : ""}`}>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li className="navlink">
-            <a href="#news">New</a>
-          </li>
-          <li className="navlink">
-            <a href="#popular">Popular</a>
-          </li>
-          <li className="navlink">
-            <a href="#trending">Trending</a>
-          </li>
-          <li className="navlink">
-            <a href="#categories">Categories</a>
-          </li>
-        </ul>
-      </header>
+      </div>
     </>
   );
 }

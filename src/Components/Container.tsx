@@ -4,8 +4,11 @@ import reviving01 from "../assets/images/reviving01.jpg";
 import top02 from "../assets/images/top02.jpg";
 import growth03 from "../assets/images/growth03.jpg";
 import mobile from "../assets/images/mobile.jpg";
+import { useState } from "react";
 
 export function Container() {
+  const [headerImage, setHeaderImages] = useState(desktop);
+
   return (
     <>
       <div className="container">

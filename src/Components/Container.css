@@ -146,7 +146,7 @@
 }
 
 /* CSS Responsive */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .container {
     margin: 1em;
     flex-direction: column;
